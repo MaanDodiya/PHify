@@ -6,7 +6,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/styles.css">
 	<script src="https://use.fontawesome.com/e15bc1541e.js" async></script>
-	<!-- <script src="js/script.js" async></script> -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous" async></script>
+	<script src="js/script.js" async></script>
 	<title>Phify</title>
 </head>
 
@@ -22,7 +24,8 @@
 			</h1>
 			<div class="tagline">Local Video Browser</div>
 		</div>
-		<button id="filepicker">Browse</button>
+		<button>Browse</button>
+		<input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
 		<footer>
 			Made with <i class="fa fa-heart pulse"></i>
 			<div>2Di Productions, 2020</div>

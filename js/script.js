@@ -1,4 +1,9 @@
 alert("Javascript connected!!")
+$("button").click(function () {
+    $("#filepicker").click();
+})
+
+
 document.getElementById("filepicker").addEventListener("change", function (event) {
     let output = document.getElementById("listing");
     let files = event.target.files;
@@ -12,6 +17,7 @@ document.getElementById("filepicker").addEventListener("change", function (event
             item.innerHTML = files[i].webkitRelativePath;
             output.appendChild(item);
         }
+        console.log(output);
     };
     var v1 = document.querySelector(".thumbnail")
     var s = filePath[0]
