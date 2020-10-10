@@ -19,6 +19,53 @@ body {
   margin: auto;
 }
 
+header {
+  position: relative;
+  padding: 15px 15px 15px 2.5%;
+  background-color: #171717;
+  margin-bottom: 2.5%;
+  cursor: default;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.phify-container {
+  background-color: #171717;
+  color: white;
+  border-radius: 3px;
+}
+
+.ify {
+  background-color: #ffa31a;
+  color: #1b1b1b;
+  padding: 0.05em 0.1em;
+  margin-left: 0.1em;
+  border-radius: 0.1em;
+}
+
+.github {
+  position: absolute;
+  right: 2.5%;
+  display: flex;
+  align-items: center;
+}
+
+.github a {
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.fa-github::before {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 .row {
   width: 100%;
   display: flex;

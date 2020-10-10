@@ -33,25 +33,10 @@ document.getElementById("filepicker").addEventListener("change", function (event
         if (files[i].name.slice(-4) == '.mp4' || files[i].name.slice(-4) == '.mkv' || files[i].name.slice(-5) == '.webm') {
             
             filePath.push(files[i]);
-            // filePath.push(path() + files[i].webkitRelativePath)
-            // let item = document.createElement("li");
-            // item.innerHTML = files[i].webkitRelativePath;
-            // output.appendChild(item);
         }
     };
-    // console.log(output);
-    // var v1 = document.querySelector(".thumbnail")
-    // var s = filePath[0]
-    // var v = document.createElement("video")
-    // v.controls = true
-    // sas = "<source src=\"../" + s + "\" type=\"video/webm\">"
-    // v.innerHTML = "<source src=\"../" + s + "\" type=\"video/webm\">";
-    // i = document.querySelector("img")
-    // v1.removeChild(i)
-    // v1.appendChild(v)
     filePath.reverse()
     loadVideos(filePath);
-    // document.querySelector("body").innerHTML = "<div class=\"container-main\">Well Well Well</div>";
 }, false);
 
 function loadVideos(filePath) {
@@ -62,12 +47,13 @@ function loadVideos(filePath) {
     var style = document.querySelector("link");
 
     style.href = "css/styles-main.css";
+    body.innerHTML = "<header class=\"logo\"><h1><div class=\"phify-container\">PH<span class=\"ify\">ify</span></div></h1><div class=\"github\"><a href=\"https://github.com/MaanDodiya/\" target=\"_blank\"><i class=\"fa fa-github\"></i> Maan Dodiya</a></div></header>";
     
-    body.innerHTML = "<div class=\"container-main\"></div>";
+    body.innerHTML += "<div class=\"container-main\"></div>";
     for(var i=0;i<ROWS;i++) {
         var row = document.createElement("div");
         row.className = "row";
-        body.children[0].appendChild(row);
+        body.children[1].appendChild(row);
     }
     
     var allRows = document.querySelectorAll(".row");
