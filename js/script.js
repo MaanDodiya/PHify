@@ -25,19 +25,20 @@ function refinedPath(s) {
 
 // Finds video files
 document.getElementById("filepicker").addEventListener("change", function (event) {
-    // let output = document.getElementById("listing");
-    // let files = event.target.files;
-    // let filePath = []
-    // console.log(files)
-    // for (let i = 0; i < files.length; i++) {
-    //     if (files[i].name.slice(-4) == '.mp4' || files[i].name.slice(-4) == '.mkv' || files[i].name.slice(-5) == '.webm') {
-    //         filePath.push(refinedPath(files[i].webkitRelativePath))
-    //         filePath.push(path() + files[i].webkitRelativePath)
-    //         let item = document.createElement("li");
-    //         item.innerHTML = files[i].webkitRelativePath;
-    //         output.appendChild(item);
-    //     }
-    // };
+    let output = document.getElementById("listing");
+    let files = event.target.files;
+    let filePath = []
+    console.log(files)
+    for (let i = 0; i < files.length; i++) {
+        if (files[i].name.slice(-4) == '.mp4' || files[i].name.slice(-4) == '.mkv' || files[i].name.slice(-5) == '.webm') {
+            
+            filePath.push(files[i]);
+            // filePath.push(path() + files[i].webkitRelativePath)
+            // let item = document.createElement("li");
+            // item.innerHTML = files[i].webkitRelativePath;
+            // output.appendChild(item);
+        }
+    };
     // console.log(output);
     // var v1 = document.querySelector(".thumbnail")
     // var s = filePath[0]
@@ -48,21 +49,62 @@ document.getElementById("filepicker").addEventListener("change", function (event
     // i = document.querySelector("img")
     // v1.removeChild(i)
     // v1.appendChild(v)
-    // filePath.reverse()
-    loadVideos();
+    filePath.reverse()
+    loadVideos(filePath);
     // document.querySelector("body").innerHTML = "<div class=\"container-main\">Well Well Well</div>";
 }, false);
 
-function loadVideos() {
+function loadVideos(filePath) {
     var COLUMNS = 3;
-    var VIDEOS = 10;
+    var VIDEOS = filePath.length;
     var ROWS = Math.ceil(VIDEOS/COLUMNS);
     var body = document.querySelector("body");
-    body.innerHTML = "<div class=\"container-main\">Well Well Well</div>";
-    for(i=0;i<ROWS;i++) {
+    var style = document.querySelector("link");
+
+    style.href = "css/styles-main.css";
+    
+    body.innerHTML = "<div class=\"container-main\"></div>";
+    for(var i=0;i<ROWS;i++) {
         var row = document.createElement("div");
-        row.textContent = "Row: " + toString(i);
-        body.appendChild(row);
+        row.className = "row";
+        body.children[0].appendChild(row);
+    }
+    
+    var allRows = document.querySelectorAll(".row");
+    for(var i=0;i<VIDEOS;i++) {
+        var div = document.createElement("div");
+        div.className = "col-4";
+
+
+        var video = document.createElement("video");
+        video.innerHTML = "<source src=\"../" + refinedPath(filePath[i].webkitRelativePath) + "\" type=\"video/webm\">";
+        video.controls = true;
+
+        var innerDiv = document.createElement("div");
+        innerDiv.innerHTML = filePath[i].name;
+
+        div.appendChild(video);
+        div.appendChild(innerDiv);
+
+        allRows[Math.floor(i/3)].appendChild(div);
     }
 
+    var footer = document.createElement("footer");
+    footer.innerHTML = "Made with <i class=\"fa fa-heart pulse\"></i>";
+    var footerDiv = document.createElement("div");
+    footerDiv.textContent = "2Di Productions, 2020";
+    footer.appendChild(footerDiv);
+
+    body.appendChild(footer);
 }
+
+// <div class="col-3">
+// 		<div class="thumbnail"><img src="images/1.jpg" alt="">
+// 			<span>20:21s</span></div>
+// 		<div>Movie Name<br></div>
+// </div>
+
+{/* <footer>
+        Made with <i class="fa fa-heart pulse"></i>
+        <div>2Di Productions, 2020</div>
+    </footer> */}

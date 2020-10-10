@@ -1,0 +1,68 @@
+/* Main Page */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charm&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  background-color: #1b1b1b;
+}
+
+.container-main {
+  width: 90%;
+  margin: auto;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.col-4 {
+  width: 32%;
+  margin: 30px auto;
+}
+
+.col-4 span {
+  font-size: 0.85rem;
+  padding: 2px;
+}
+
+.col-4 video {
+  width: 100%;
+}
+
+footer {
+  margin: 5% 0 0;
+  padding: 1% 0;
+  background-color: #171717;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+}
+
+footer .fa-heart {
+  color: #ffa31a;
+  margin: 0 3px;
+  font-size: 15px;
+  animation: pound 0.35s infinite alternate;
+}
+
+footer div {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes pound {
+  to {
+    transform: scale(1.1);
+  }
+}
