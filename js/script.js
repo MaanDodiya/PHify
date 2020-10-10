@@ -1,9 +1,9 @@
-alert("Javascript connected!!")
+// For browse button diverting it to file tag
 $("button").click(function () {
     $("#filepicker").click();
 })
 
-
+// Finds video files
 document.getElementById("filepicker").addEventListener("change", function (event) {
     let output = document.getElementById("listing");
     let files = event.target.files;
@@ -17,8 +17,8 @@ document.getElementById("filepicker").addEventListener("change", function (event
             item.innerHTML = files[i].webkitRelativePath;
             output.appendChild(item);
         }
-        console.log(output);
     };
+    console.log(output);
     var v1 = document.querySelector(".thumbnail")
     var s = filePath[0]
     var v = document.createElement("video")
@@ -49,7 +49,3 @@ function refinedPath(s) {
     }
     return s.slice(i + 1, s.length);
 }
-
-// document.querySelector(".thumbnail").addEventListener("click", function () {
-//     document.querySelector("body").style.display = "none";
-// });
