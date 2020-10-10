@@ -1,149 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Charm&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charm&display=swap");
 
 * {
-    font-family: 'Poppins', sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
 }
 
 body {
-    background-color: #1b1b1b;
+  background-color: #1b1b1b;
 }
 
 div.container {
-    padding-top: 30px;
-    width: 50%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  padding-top: 30px;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* ####################### */
 .github {
-    position: absolute;
-    right: 2%;
-    display: flex;
-    align-items: center;
+  position: absolute;
+  right: 2%;
+  display: flex;
+  align-items: center;
 }
 
 .github a {
-    padding: 10px;
-    font-size: 16px;
-    text-decoration: none;
-    color:  rgba(255, 255, 255, 0.4);
-    transition: 0.3s;
+  padding: 10px;
+  font-size: 16px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  transition: 0.3s;
 }
 
 .github a:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 44px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 44px;
 }
 
 .fa-github::before {
-    font-size: 20px;
-    color:  rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.4);
 }
-
 
 /* ####################### */
 h1 {
-    font-size: 90px;
+  font-size: 90px;
 }
 
 .phify-container {
-    background-color: #1b1b1b;
-    color: white;
-    border-radius: 5px;
+  background-color: #1b1b1b;
+  color: white;
+  border-radius: 5px;
 }
 
 .ify {
-    background-color: #ffa31a;
-    color: #1b1b1b;
-    padding: 0.1em;
-    margin-left: 0.1em;
-    border-radius: 0.1em;
+  background-color: #ffa31a;
+  color: #1b1b1b;
+  padding: 0.1em;
+  margin-left: 0.1em;
+  border-radius: 0.1em;
 }
 
 .tagline {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.4);
-    text-align: right;
-    padding: 0 1%;
-    margin-top: 3%;
-    font-weight: 400;
-    font-style: italic;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  text-align: right;
+  padding: 0 1%;
+  margin-top: 3%;
+  font-weight: 400;
+  font-style: italic;
 }
 
-
 /* ####################### */
-.container button{
-    background-color: #171717;
-    position: absolute;
-    top: 40%;
-    border-style: none;
-    font-size: 20px;
-    width: 300px;
-    padding: 10px;
-    border-radius: 40px;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: 0.2s;
-    font-weight: 600;
+.container button {
+  background-color: #171717;
+  position: absolute;
+  top: 40%;
+  border-style: none;
+  font-size: 20px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 600;
 }
 
 .container button:focus {
-    display: none;
-    text-decoration: none;
-    border-style: none;
+  display: none;
+  text-decoration: none;
+  border-style: none;
 }
 
 .container button:hover {
-    background-color: #ffa31a;
-    color: black;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    text-decoration: none;
+  background-color: #ffa31a;
+  color: black;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
 }
 
 .container input {
-    position: absolute;
-    top: -100px;
+  position: absolute;
+  top: -100px;
 }
 
 /* ####################### */
 footer {
-    position: absolute;
-    bottom: 2%;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.4);
-    font-size: 14px;
+  position: absolute;
+  bottom: 2%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
 }
 
 footer .fa-heart {
-    color: #ffa31a;
-    margin: 0 3px;
-    font-size: 15px;
-    animation: pound .35s infinite alternate;
+  color: #ffa31a;
+  margin: 0 3px;
+  font-size: 15px;
+  animation: pound 0.35s infinite alternate;
 }
 
 footer div {
-    font-size: 16px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 @keyframes pound {
-    to {
-      transform: scale(1.1);
-    }
+  to {
+    transform: scale(1.1);
+  }
 }
-
 
 /* ####################### */
 /* Main Page */
 
+.container-main {
+  width: 90%;
+  margin: auto;
+}
 
 /* 
 header{
