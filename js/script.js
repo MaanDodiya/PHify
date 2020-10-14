@@ -1,8 +1,8 @@
 // For browse button diverting it to file tag
-$("button").click(function () {
-    $("#filepicker").click();
-})
 
+document.querySelector("button").addEventListener("click", function () {
+    document.querySelector("#filepicker").click();
+})
 
 function path() {
     string = window.location.pathname;
