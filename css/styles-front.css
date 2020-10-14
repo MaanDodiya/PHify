@@ -30,16 +30,17 @@ div.container {
 }
 
 .github a {
+  display: flex;
   padding: 10px;
-  font-size: 16px;
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
+  color: #999999;
   transition: 0.3s;
 }
 
-.fa-github::before {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.4);
+.github-logo {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
 }
 
 /* ####################### */
@@ -114,10 +115,12 @@ footer {
   font-size: 14px;
 }
 
-footer .fa-heart {
-  color: #ffa31a;
+footer .heart {
+  text-align: center;
+  fill: #ffa31a;
   margin: 0 3px;
-  font-size: 15px;
+  height: 13px;
+  width: 13px;
   animation: pound 0.35s infinite alternate;
 }
 
@@ -129,7 +132,7 @@ footer div {
 
 @keyframes pound {
   to {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 }
 

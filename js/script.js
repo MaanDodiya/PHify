@@ -47,7 +47,7 @@ function loadVideos(filePath) {
     var style = document.querySelector("link");
 
     style.href = "css/styles-main.css";
-    body.innerHTML = "<header class=\"logo\"><h1><div class=\"phify-container\">PH<span class=\"ify\">ify</span></div></h1><div class=\"github\"><a href=\"https://github.com/MaanDodiya/\" target=\"_blank\"><i class=\"fa fa-github\"></i> Maan Dodiya</a></div></header>";
+    body.innerHTML = "<header class=\"logo\"><h1><div class=\"phify-container\">PH<span class=\"ify\">ify</span></div></h1><div class=\"github\"><a href=\"https://github.com/MaanDodiya/\" target=\"_blank\"><img src=\"images/github-logo.png\" class=\"github-logo\"></img>Maan Dodiya</a></div></header>";
     
     body.innerHTML += "<div class=\"container-main\"></div>";
     for(var i=0;i<ROWS;i++) {
@@ -76,21 +76,10 @@ function loadVideos(filePath) {
     }
 
     var footer = document.createElement("footer");
-    footer.innerHTML = "Made with <i class=\"fa fa-heart pulse\"></i>";
+    footer.innerHTML = "Made with <img src=\"images/heart.png\" class=\"heart\">";
     var footerDiv = document.createElement("div");
     footerDiv.textContent = "2Di Productions, 2020";
     footer.appendChild(footerDiv);
 
     body.appendChild(footer);
 }
-
-// <div class="col-3">
-// 		<div class="thumbnail"><img src="images/1.jpg" alt="">
-// 			<span>20:21s</span></div>
-// 		<div>Movie Name<br></div>
-// </div>
-
-{/* <footer>
-        Made with <i class="fa fa-heart pulse"></i>
-        <div>2Di Productions, 2020</div>
-    </footer> */}
