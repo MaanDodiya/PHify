@@ -4,6 +4,8 @@ document.querySelector("button").addEventListener("click", function () {
     document.querySelector("#filepicker").click();
 })
 
+
+
 function path() {
     string = window.location.pathname;
     count = 0
@@ -28,16 +30,23 @@ document.getElementById("filepicker").addEventListener("change", function (event
     let output = document.getElementById("listing");
     let files = event.target.files;
     let filePath = []
-    console.log(files)
     for (let i = 0; i < files.length; i++) {
         if (files[i].name.slice(-4) == '.mp4' || files[i].name.slice(-4) == '.mkv' || files[i].name.slice(-5) == '.webm') {
-            
             filePath.push(files[i]);
         }
     };
     filePath.reverse()
     loadVideos(filePath);
 }, false);
+
+function videoTitle(name) {
+    for(var i=name.length-1; i>=0; i--) {
+        if(name[i]==".") {
+            return name.substring(0, i);
+        }
+    }
+    return name;
+}
 
 function loadVideos(filePath) {
     var COLUMNS = 3;
@@ -63,12 +72,14 @@ function loadVideos(filePath) {
 
 
         var video = document.createElement("video");
+        video.disablePictureInPicture = true;
         video.innerHTML = "<source src=\"../" + refinedPath(filePath[i].webkitRelativePath) + "\" type=\"video/webm\">";
+        video.currentTime = 60;
         video.controls = true;
-
+        
         var innerDiv = document.createElement("div");
-        innerDiv.innerHTML = filePath[i].name;
-
+        innerDiv.innerHTML = videoTitle(filePath[i].name);
+        
         div.appendChild(video);
         div.appendChild(innerDiv);
 
@@ -80,6 +91,5 @@ function loadVideos(filePath) {
     var footerDiv = document.createElement("div");
     footerDiv.textContent = "2Di Productions, 2020";
     footer.appendChild(footerDiv);
-
     body.appendChild(footer);
 }

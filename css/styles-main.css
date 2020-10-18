@@ -74,13 +74,16 @@ h1 {
 }
 
 .col-4 {
-  width: 32%;
+  width: 30%;
   margin: 30px auto;
 }
 
-.col-4 span {
-  font-size: 0.85rem;
+.col-4 div {
+  font-size: 18px;
   padding: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .col-4 video {
