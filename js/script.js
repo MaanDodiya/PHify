@@ -56,7 +56,7 @@ function loadVideos(filePath) {
     var style = document.querySelector("link");
 
     style.href = "css/styles-main.css";
-    body.innerHTML = "<header class=\"logo\"><h1><div class=\"phify-container\">PH<span class=\"ify\">ify</span></div></h1><div class=\"github\"><a href=\"https://github.com/MaanDodiya/\" target=\"_blank\"><img src=\"images/github-logo.png\" class=\"github-logo\"></img>Maan Dodiya</a></div></header>";
+    body.innerHTML = "<header class=\"logo\"><h1><div class=\"phify-container\" onclick=refresh()>PH<span class=\"ify\">ify</span></div></h1><div class=\"github\"><a href=\"https://github.com/MaanDodiya/\" target=\"_blank\"><img src=\"images/github-logo.png\" class=\"github-logo\"></img>Maan Dodiya</a></div></header>";
     
     body.innerHTML += "<div class=\"container-main\"></div>";
     for(var i=0;i<ROWS;i++) {
@@ -92,4 +92,8 @@ function loadVideos(filePath) {
     footerDiv.textContent = "2Di Productions, 2020";
     footer.appendChild(footerDiv);
     body.appendChild(footer);
+}
+
+function refresh() {
+    location.reload();
 }

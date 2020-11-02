@@ -54,6 +54,10 @@ h1 {
   border-radius: 5px;
 }
 
+.phify-container:hover {
+  cursor: pointer;
+}
+
 .ify {
   background-color: #ffa31a;
   color: #1b1b1b;

@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles-front.css" />
-    <script src="js/script.js" async></script>
-    <title>Phify</title>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/styles-front.css" />
+		<link rel="icon" href="images/Phify-Favicon.png" sizes="512x512">
+		<script src="js/script.js" async></script>
+		<title>Phify</title>
+	</head>
 
-  <body>
-    <div class="container">
-      <div class="github">
-        <a href="https://github.com/MaanDodiya/" target="_blank">
-          <img src="images/github-logo.png" class="github-logo"></img>
-          Maan Dodiya</a
-        >
-      </div>
-      <div class="logo">
-        <h1>
-          <div class="phify-container">PH<span class="ify">ify</span></div>
-        </h1>
-        <div class="tagline">Local Video Browser</div>
-      </div>
-      <button>Browse</button>
-      <input
-        type="file"
-        id="filepicker"
-        name="fileList"
-        webkitdirectory
-        multiple
-      />
-      <footer>
-        Made with <img src="images/heart.png" class="heart">
-        <div>2Di Productions, 2020</div>
-      </footer>
-    </div>
-  </body>
+	<body>
+		<div class="container">
+			<div class="github">
+				<a href="https://github.com/MaanDodiya/" target="_blank">
+					<img src="images/github-logo.png" class="github-logo"></img>
+					Maan Dodiya</a
+				>
+			</div>
+			<div class="logo">
+				<h1>
+					<div class="phify-container" onclick=refresh()>PH<span class="ify">ify</span></div>
+				</h1>
+				<div class="tagline">Local Video Browser</div>
+			</div>
+			<button>Browse</button>
+			<input
+				type="file"
+				id="filepicker"
+				name="fileList"
+				webkitdirectory
+				multiple
+			/>
+			<footer>
+				Made with <img src="images/heart.png" class="heart">
+				<div>2Di Productions, 2020</div>
+			</footer>
+		</div>
+	</body>
 </html>
