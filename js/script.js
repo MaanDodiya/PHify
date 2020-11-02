@@ -72,11 +72,17 @@ function loadVideos(filePath) {
 
 
         var video = document.createElement("video");
+        video.addEventListener("mouseenter", function (event) {
+           event.target.controls = true; 
+        });
+        video.addEventListener("mouseleave", function (event) {
+           event.target.controls = false; 
+        });
         video.title = videoTitle(filePath[i].name);
         video.disablePictureInPicture = true;
         video.innerHTML = "<source src=\"../" + refinedPath(filePath[i].webkitRelativePath) + "\" type=\"video/webm\">";
         video.currentTime = 60;
-        video.controls = true;
+        video.controls = false;
         
         var innerDiv = document.createElement("div");
         innerDiv.title = videoTitle(filePath[i].name);
