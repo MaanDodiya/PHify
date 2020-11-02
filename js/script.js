@@ -72,12 +72,14 @@ function loadVideos(filePath) {
 
 
         var video = document.createElement("video");
+        video.title = videoTitle(filePath[i].name);
         video.disablePictureInPicture = true;
         video.innerHTML = "<source src=\"../" + refinedPath(filePath[i].webkitRelativePath) + "\" type=\"video/webm\">";
         video.currentTime = 60;
         video.controls = true;
         
         var innerDiv = document.createElement("div");
+        innerDiv.title = videoTitle(filePath[i].name);
         innerDiv.innerHTML = videoTitle(filePath[i].name);
         
         div.appendChild(video);
