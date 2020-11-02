@@ -1,6 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Charm&display=swap");
 
+:root {
+  --white: #ffffff;
+  --gold: #ffa31a;
+  --github: #999999;
+  --grey: #999999;
+  --medium-grey: #333333;
+  --dark-grey: #171717;
+  --bg-black: #1b1b1b;
+  --black: #000000;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   padding: 0;
@@ -10,20 +21,22 @@
 }
 
 body {
-  background-color: #1b1b1b;
+  background-color: var(--bg-black);
 }
 
 div.container {
-  padding-top: 30px;
   width: 50%;
+  height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 /* ####################### */
 .github {
   position: absolute;
+  top: 20px;
   right: 2%;
   display: flex;
   align-items: center;
@@ -33,7 +46,7 @@ div.container {
   display: flex;
   padding: 10px;
   text-decoration: none;
-  color: #999999;
+  color: var(--github);
   transition: 0.3s;
 }
 
@@ -43,14 +56,19 @@ div.container {
   margin-right: 5px;
 }
 
+
 /* ####################### */
+.logo {
+  margin-top: 30px;
+}
+
 h1 {
   font-size: 90px;
 }
 
 .phify-container {
-  background-color: #1b1b1b;
-  color: white;
+  background-color: var(--bg-black);
+  color: var(--white);
   border-radius: 5px;
 }
 
@@ -59,8 +77,8 @@ h1 {
 }
 
 .ify {
-  background-color: #ffa31a;
-  color: #1b1b1b;
+  background-color: var(--gold);
+  color: var(--bg-black);
   padding: 0.1em;
   margin-left: 0.1em;
   border-radius: 0.1em;
@@ -68,7 +86,7 @@ h1 {
 
 .tagline {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--github);
   text-align: right;
   padding: 0 1%;
   margin-top: 3%;
@@ -78,15 +96,14 @@ h1 {
 
 /* ####################### */
 .container button {
-  background-color: #171717;
-  position: absolute;
-  top: 40%;
+  background-color: var(--dark-grey);
+  /* position: absolute; */
   border-style: none;
   font-size: 20px;
   width: 300px;
   padding: 10px;
   border-radius: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--medium-grey);
   cursor: pointer;
   transition: 0.2s;
   font-weight: 600;
@@ -99,9 +116,9 @@ h1 {
 }
 
 .container button:hover {
-  background-color: #ffa31a;
-  color: black;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: var(--gold);
+  color: var(--black);
+  border: 2px solid var(--dark-grey);
   text-decoration: none;
 }
 
@@ -112,16 +129,15 @@ h1 {
 
 /* ####################### */
 footer {
-  position: absolute;
-  bottom: 2%;
+  margin-bottom: 2%;
   text-align: center;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--grey);
   font-size: 14px;
 }
 
 footer .heart {
   text-align: center;
-  fill: #ffa31a;
+  fill: var(--gold);
   margin: 0 3px;
   height: 13px;
   width: 13px;
@@ -131,7 +147,7 @@ footer .heart {
 footer div {
   font-size: 16px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--white);
 }
 
 @keyframes pound {
