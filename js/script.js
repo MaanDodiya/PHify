@@ -4,8 +4,6 @@ document.querySelector("button").addEventListener("click", function () {
     document.querySelector("#filepicker").click();
 })
 
-
-
 function path() {
     string = window.location.pathname;
     count = 0
@@ -70,7 +68,6 @@ function loadVideos(filePath) {
         var div = document.createElement("div");
         div.className = "col-4";
 
-
         var video = document.createElement("video");
         video.addEventListener("mouseenter", function (event) {
            event.target.controls = true; 
@@ -83,15 +80,36 @@ function loadVideos(filePath) {
         video.innerHTML = "<source src=\"../" + refinedPath(filePath[i].webkitRelativePath) + "\" type=\"video/webm\">";
         video.currentTime = 60;
         video.controls = false;
-        
+
         var innerDiv = document.createElement("div");
         innerDiv.title = videoTitle(filePath[i].name);
         innerDiv.innerHTML = videoTitle(filePath[i].name);
         
+        var span = document.createElement("span");
+        
         div.appendChild(video);
         div.appendChild(innerDiv);
+        div.appendChild(span);
 
         allRows[Math.floor(i/3)].appendChild(div);
+    }
+    var videos = document.querySelectorAll("video");
+    for(var i=0;i<videos.length;i++) {
+        videos[i].onloadedmetadata = function() {
+            var total = this.duration;
+            total = Math.floor(total);
+            var hours = Math.floor(total/3600);
+            var minutes = Math.floor(total/60);
+            var seconds = Math.floor(total%60);
+            var time = "";
+            if(hours!=0) {
+                time+=hours.toString()+"h:";
+            }
+            time+=minutes.toString()+":"
+            time+=seconds.toString()+"s";
+            
+            this.parentElement.lastElementChild.innerText = time;
+        }
     }
 
     var footer = document.createElement("footer");
@@ -105,3 +123,4 @@ function loadVideos(filePath) {
 function refresh() {
     location.reload();
 }
+
