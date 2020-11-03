@@ -110,6 +110,7 @@ h1 {
 }
 
 .col-4 {
+  position: relative;
   width: 30%;
   margin: 30px auto;
 }
@@ -126,6 +127,17 @@ h1 {
   width: 100%;
 }
 
+.col-4 span {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font-size: 1vw;
+  padding: 2px 5px;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 3px;
+  opacity: 0.85;
+}
 
 footer {
   margin: 5% 0 0;
