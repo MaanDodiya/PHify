@@ -43,7 +43,7 @@ body {
 
 div.container {
   width: 50%;
-  height: 100vh;
+  min-height: 100vh;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -115,23 +115,17 @@ h1 {
 
 @media only screen and (max-width: 768px) {
   .phify-container {
-    position: absolute;
-    left: 10%;
-    top: 5%;
     font-size: 13vw;
   }
 
   .tagline {
-    /* position: absolute;
-    left: 28%;
-    top: 22%; */
     font-size: 1.9vw;
   }
 
   .github {
     position: absolute;
-    right: 5%;
-    top: 5%;
+    right: 10px;
+    top: 10px;
   }
 
   .github a {
