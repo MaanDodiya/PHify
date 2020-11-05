@@ -61,10 +61,10 @@ div.container {
 
 .github a {
   display: flex;
-  padding: 10px;
+  align-items: center;
+  padding: 0.7vw;
   text-decoration: none;
   color: var(--github);
-  transition: 0.3s;
 }
 
 .github-logo {
@@ -94,6 +94,7 @@ h1 {
   cursor: pointer;
 }
 
+
 .ify {
   font-family: "Poppins-Bold", sans-serif;
   background-color: var(--gold);
@@ -110,6 +111,37 @@ h1 {
   text-align: right;
   padding: 0 1%;
   margin-top: 3%;
+}
+
+@media only screen and (max-width: 768px) {
+  .phify-container {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    font-size: 13vw;
+  }
+
+  .tagline {
+    /* position: absolute;
+    left: 28%;
+    top: 22%; */
+    font-size: 1.9vw;
+  }
+
+  .github {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+  }
+
+  .github a {
+    font-size: 2.1vw;
+  }
+
+  .github-logo {
+    height: 2.5vw;
+    width: 2.5vw;
+  }
 }
 
 /* ####################### */
@@ -144,28 +176,70 @@ h1 {
   top: -100px;
 }
 
+@media only screen and (max-width: 768px) {
+  .container button {
+    position: absolute;
+    top: 50%;
+    font-size: 2.5vw;
+    width: 40vw;
+  }
+}
+
+
 /* ####################### */
 footer {
   margin-bottom: 2%;
   text-align: center;
   color: var(--grey);
   font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 footer .heart {
   text-align: center;
   fill: var(--gold);
-  margin: 0 3px;
+  margin: 0 5px;
   height: 13px;
   width: 13px;
   animation: pound 0.35s infinite alternate;
 }
+footer .line-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--grey);
+}
 
-footer div {
+footer .line-2 {
   font-size: 16px;
   font-family: "Poppins-SemiBold", sans-serif;
   color: var(--white);
 }
+
+@media only screen and (max-width: 768px) {
+  footer {
+    font-size: 2vw;
+  }
+
+  footer .heart {
+    margin: 0px 0.8vw;
+    height: 2vw;
+    width: 2vw;
+  }
+
+  footer .line-1 {
+    font-size: 2vw;
+  }
+  
+  footer .line-2 {
+    font-size: 2.2vw;
+  }
+}
+
+/* ####################### */
 
 @keyframes pound {
   to {
@@ -173,4 +247,3 @@ footer div {
   }
 }
 
-/* ####################### */
