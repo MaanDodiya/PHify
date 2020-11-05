@@ -104,9 +104,15 @@ function loadVideos(filePath) {
             var time = "";
             if(hours!=0) {
                 time+=hours.toString()+"h:";
+                if(minutes<10) {
+                    time+="0";
+                }
             }
             time+=minutes.toString()+":"
-            time+=seconds.toString()+"s";
+            if(seconds<10) {
+                time+="0";
+            }
+            time+=seconds.toString();
             
             this.parentElement.lastElementChild.innerText = time;
         }
